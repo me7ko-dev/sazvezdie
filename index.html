@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Съзвездие</title>
+<meta name="description" content="Твоите GitHub репота като жива галактика.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="sky"></canvas>
+
+<header class="hud top">
+  <div class="brand">
+    <h1>Съзвездие</h1>
+    <p id="caption">Вселената, която строиш.</p>
+  </div>
+  <form id="who" autocomplete="off">
+    <span>github.com/</span>
+    <input id="user" spellcheck="false" placeholder="потребител">
+    <button type="submit" title="Покажи">→</button>
+  </form>
+</header>
+
+<aside class="hud stats" id="stats"></aside>
+
+<aside class="panel" id="panel" hidden>
+  <button class="close" id="panelClose" aria-label="Затвори">×</button>
+  <div class="lang" id="pLang"></div>
+  <h2 id="pName"></h2>
+  <p id="pDesc"></p>
+  <dl id="pMeta"></dl>
+  <div id="pFamily"></div>
+  <a id="pLink" target="_blank" rel="noopener">Отвори в GitHub ↗</a>
+</aside>
+
+<div class="tip" id="tip"></div>
+
+<footer class="hud bottom">
+  <button id="play" title="Големият взрив">▶</button>
+  <div class="timeline" id="timeline">
+    <div class="ticks" id="ticks"></div>
+    <div class="fill" id="fill"></div>
+  </div>
+  <div class="date" id="date">—</div>
+  <button id="shot" title="Запази снимка">⤓</button>
+</footer>
+
+<div class="loading" id="loading">Сглобявам галактиката…</div>
+
+<script src="app.js"></script>
+</body>
+</html>
